@@ -5,21 +5,21 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Jackson Codes .net</title>
- <link href="http://jacksoncodes.net/atom.xml" rel="self"/>
- <link href="http://jacksoncodes.net/"/>
+ <link href="http://csjackson.github.com/atom.xml" rel="self"/>
+ <link href="http://csjackson.github.com/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://jacksoncodes.net/</id>
+ <id>http://csjackson.github.com/</id>
  <author>
    <name>Chris Jackson</name>
-   <email>chris@jacksoncodes.net</email>
+   <email>chris@csjackson.github.com</email>
  </author>
 
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://jacksoncodes.net{{ post.url }}"/>
+   <link href="http://csjackson.github.com{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://jacksoncodes.net{{ post.id }}</id>
+   <id>http://csjackson.github.com{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
