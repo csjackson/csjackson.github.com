@@ -1,0 +1,28 @@
+---
+layout: post
+title: GIT Commands
+---
+<h2>
+Dallas ASP.Net User Group Meeting 01/25/2011
+</h2>
+<div>
+Once again scrambling to get a seat on time, I sat down to my first ASP.Net meeting. After a few announcements, including one that a new version of <a title=”Webmatrix” href=“http://www.microsoft.com/web/webmatrix/?WT.mc_id=src-n-us-wag-WM-WWSEM”> Webmatrix </a>, a hobbyist web development tool, is due for release, we began a conversation on patterns in software development. Had everyone brought their book? Read it? What? We discussed this back in the October meeting, or course. Looks like I'm playing some more catch-up.
+</div>
+<p>
+<H3>What are "Patterns", anyhow? </h3> <p>Patterns are systems that developers use over and over again, to achieve results. They are things programmers have all been doing since programming was something done with punch-cards. Giving them names gives us a common vocabulary so that we can talk to each other about them, and when they do or don't' fit a given project.</p> <p>They're jargon: simple linguistic handles on complex ideas specific to a given trade.</p>
+
+<p>As we discussed some of them, I recognized some of them in work that our Adventure project had already implemented.  Clearly, this was why Tim was so keen that I see this particular talk. </p><p>The hand-out that went along with the talk had 23, and we skimmed over 7 of them. Already, I saw the pattern "Strategy" (a set of encapsulated algorithms that can be swapped to carry out specific behavior) well at work in our command parser. Rather than one class that will handle any user's command and its behavior, we can define what a command should look like, and tell the program to search a common repository for which command is called. This makes extending our command lexicon as simple as writing a new class, and adding it to the enumeration. </p>
+
+<p><h3>The Strategy pattern teaches us to:</h3></p>
+<ul>
+<li>Identify the common and unique behaviors of given actions.
+<li>Program to an interface, like one of those tool kits that all slot in a common power pack, so you only have to write the "power pack" or "handle" bits of the program once. This also makes the program's behavior more unified, flattening the user's learning curve, later.
+<li>Favor composition over inheritance. (For later: learn what the difference is.)
+</ul>
+<p>We discussed the Observer pattern, which is so common that the .Net framework already is built with event handling baked in.</p><p>
+
+<p>The Command pattern saw time in the spot light. If you encapsulate a request correctly, you can treat it like an object. As an analogy, a universal remote doesn't need to know how to switch DVDs, it just needs to know how to pass the command to the player, secure in the knowledge that the player knows how to switch DVDs. </p><p>
+<p>I have to admit that I don't understand how the Façade pattern differs from command. Aren't they both about presenting a unified interface between different elements in a solution, so that you have only one format, and allow the specific sub-systems coded to deal with the differences work on them, while presenting a unified interface? </p><p>
+
+</p><p>Several other patterns got mentioned, including "Antipatterns": patterns commonly used but counterproductive, such as Spaghetti Code, or Gold-Plating (Remember: Good enough is, by definition, good enough!). 
+</p><p>An antipattern is different from a common mistake or bad habit if it meets 2 criteria. It must initially appear helpful, and a better answer must already have been clearly delineated somewhere. </p>
